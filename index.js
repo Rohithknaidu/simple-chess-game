@@ -1,3 +1,18 @@
+// Get all the grid elements
+// Add click event listener to each grid
+document.querySelectorAll('.box').forEach(grid => {
+    grid.addEventListener('click', function () {
+      const row = this.parentElement.getAttribute('id').slice(3); // Extract row number from the parent element's ID
+      const col = this.getAttribute('id').slice(1); // Extract column number from the grid's ID
+      console.log(`Location: Row ${row}, Column ${col}`);
+    });
+});
+
+
+
+
+
+
 // Inserting the Images
 function insertImage() {
 
@@ -574,3 +589,15 @@ document.querySelectorAll('.box').forEach(ee => {
         }
     })
 })
+
+// Get all the grid elements
+// const grids = document.querySelectorAll('.grid');
+
+// // Add click event listener to each grid
+// grids.forEach(grid => {
+//   grid.addEventListener('click', function () {
+//     const row = this.parentElement.getAttribute('data-row');
+//     const col = this.getAttribute('data-col');
+//     console.log(`Location: Row ${row}, Column ${col}`);
+//   });
+// });
